@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+
+# Build output
+artifacts
+cache
+coverage
+app/dist
+app/dist-ssr
+
+# Logs
+logs
+*.log
+
+# Local overrides
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

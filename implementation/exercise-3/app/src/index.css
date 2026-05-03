@@ -1,0 +1,197 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1d2030;
+  background: #f4efff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button, input { font: inherit; }
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.25rem;
+  background: #5c2bd9;
+  color: white;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #ded2ff;
+  border-radius: 0.8rem;
+  padding: 0.85rem 1rem;
+  background: white;
+  color: #1d2030;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  color: #615978;
+  font-weight: 800;
+}
+
+.app-shell {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.hero, .status-grid, .content-grid, .panel-header, .two-column-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero {
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, p { margin: 0; }
+
+h1 { font-size: clamp(2rem, 5vw, 4rem); }
+
+h2 { margin-bottom: 1rem; }
+
+.eyebrow {
+  color: #7a35ff;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.subtle { color: #6f6687; }
+
+.status-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 1rem;
+}
+
+.content-grid {
+  align-items: start;
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.info-card, .panel, .ticket-card {
+  border: 1px solid rgba(122, 53, 255, 0.14);
+  border-radius: 1.3rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 50px rgba(92, 43, 217, 0.09);
+}
+
+.info-card {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.info-card span {
+  color: #6f6687;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.panel {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.panel-header {
+  align-items: start;
+  grid-template-columns: 1fr auto;
+}
+
+.two-column-form { grid-template-columns: 1fr 1fr; }
+
+.primary-button {
+  background: linear-gradient(135deg, #8d52ff, #4115a9);
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  background: #efe8ff;
+  color: #5c2bd9;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.warning {
+  background: #fff4df;
+  color: #946200;
+}
+
+.empty-state {
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #f7f2ff;
+  color: #6f6687;
+}
+
+.ticket-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.ticket-card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1rem;
+}
+
+.delegated-transfer-card {
+  margin-top: 1rem;
+}
+
+.inline-code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #4115a9;
+}
+
+.ticket-card dl {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+}
+
+.ticket-card dt {
+  color: #6f6687;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ticket-card dd {
+  margin: 0;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .hero, .status-grid, .content-grid, .panel-header, .two-column-form {
+    grid-template-columns: 1fr;
+  }
+}

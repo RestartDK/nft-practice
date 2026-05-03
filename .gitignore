@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Bun / package manager
+bun.lockb
+
+# Build artifacts
+dist/
+coverage/
+artifacts/
+cache/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local databases
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Logs
+logs/
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# TypeScript build info
+*.tsbuildinfo

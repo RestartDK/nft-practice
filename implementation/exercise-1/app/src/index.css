@@ -1,0 +1,313 @@
+:root {
+  color: #e5eef9;
+  background: #07101b;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(80, 130, 255, 0.18), transparent 32%),
+    linear-gradient(180deg, #07101b 0%, #0b1421 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.topbar,
+.status-grid,
+.content-grid,
+.admin-list,
+.product-list,
+.purchase-row,
+.inline-form,
+.nav-tabs {
+  display: grid;
+}
+
+.topbar {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+
+.topbar h1,
+.panel h2,
+.product-card h3,
+.admin-item h3 {
+  margin: 0;
+}
+
+.topbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.topbar > *,
+.status-grid > *,
+.content-grid > *,
+.panel-header > * {
+  min-width: 0;
+}
+
+.nav-tabs {
+  grid-auto-flow: column;
+  gap: 0.5rem;
+}
+
+.nav-tabs a,
+.primary-button,
+.purchase-row button,
+.inline-form button {
+  border: 1px solid rgba(123, 162, 255, 0.35);
+  background: rgba(13, 24, 40, 0.82);
+  color: #f3f7ff;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+  white-space: normal;
+}
+
+.nav-tabs a.active,
+.nav-tabs a:hover,
+.primary-button:hover,
+.purchase-row button:hover,
+.inline-form button:hover {
+  border-color: rgba(140, 183, 255, 0.9);
+  background: rgba(23, 43, 71, 0.95);
+  transform: translateY(-1px);
+}
+
+.status-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card,
+.panel,
+.product-card,
+.admin-item {
+  background: rgba(10, 18, 30, 0.86);
+  border: 1px solid rgba(123, 162, 255, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 24px 80px rgba(1, 6, 16, 0.4);
+}
+
+.info-card {
+  padding: 1rem 1.2rem;
+}
+
+.info-card strong,
+.product-card h3,
+.admin-item h3,
+.admin-item p,
+.empty-state,
+.subtle,
+.owned-list li > div,
+.owned-list strong,
+.owned-list span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.info-card strong {
+  display: block;
+}
+
+.status-card strong {
+  color: #a6c5ff;
+}
+
+.content-grid {
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+  gap: 1.5rem;
+}
+
+.panel,
+.admin-panel {
+  padding: 1.5rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.product-list,
+.admin-list {
+  gap: 1rem;
+}
+
+.product-card,
+.admin-item {
+  padding: 1.25rem;
+  min-width: 0;
+}
+
+.metric-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.metric-list div {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+  padding: 0.75rem;
+}
+
+.metric-list dt,
+.label,
+.eyebrow,
+.owned-list span,
+.admin-item p {
+  color: #91a8c9;
+}
+
+.metric-list dd {
+  margin: 0.25rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f7fbff;
+}
+
+.purchase-row,
+.inline-form {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.purchase-row label,
+.inline-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  color: #bed0ec;
+}
+
+.purchase-row input,
+.inline-form input {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(123, 162, 255, 0.24);
+  background: rgba(6, 11, 19, 0.92);
+  color: inherit;
+  padding: 0.8rem 0.9rem;
+}
+
+.owned-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.owned-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(123, 162, 255, 0.16);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 18px;
+  padding: 0.9rem 1rem;
+}
+
+.owned-list li > div {
+  min-width: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: rgba(122, 170, 255, 0.15);
+  color: #d7e6ff;
+  white-space: normal;
+  text-align: center;
+}
+
+.pill.warning {
+  background: rgba(255, 182, 72, 0.16);
+  color: #ffd58d;
+}
+
+.empty-state,
+.subtle {
+  color: #a8b8d3;
+}
+
+@media (max-width: 940px) {
+  .topbar,
+  .status-grid,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    width: min(100% - 1rem, 1180px);
+    padding-top: 1rem;
+  }
+
+  .metric-list,
+  .purchase-row,
+  .inline-form,
+  .nav-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .owned-list li,
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
